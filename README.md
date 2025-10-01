@@ -1,1 +1,2 @@
-# FeynRules_particle_info
+# Generate the information of the particles in the coupled channel scattering
+
