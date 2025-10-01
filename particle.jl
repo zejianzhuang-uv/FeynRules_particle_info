@@ -292,16 +292,36 @@ function select_particle(name::String)
         selfcharged = "True"
         PropagatorType = "Sine"
         AntiParticleName = "ome"
-    elseif name == "Dstp"
+    elseif name == "Dstp" # c dbar
         mass, S, Q, isospin, i3, FA_id = particle_information(2010, 0, 1, 1/2, 1/2, "V[7]")
         selfcharged = "False"
         PropagatorType = "Straight"
-        AntiParticleName = "Dmst"
+        AntiParticleName = "Dstm"
+    elseif name == "Dstm" #
+        mass, S, Q, isospin, i3, FA_id = particle_information(2010, 0, -1, 1/2, -1/2, "-V[7]")
+        selfcharged = "False"
+        PropagatorType = "Straight"
+        AntiParticleName = "Dstp"
+    elseif name == "D0st" # c ubar
+        mass, S, Q, isospin, i3, FA_id = particle_information(2006, 0, 0, 1/2, -1/2, "V[8]")
+        selfcharged = "False"
+        PropagatorType = "Straight"
+        AntiParticleName = "D0stbar"
+    elseif name == "D0stbar" # cbar u
+        mass, S, Q, isospin, i3, FA_id = particle_information(2006, 0, 0, 1/2, 1/2, "-V[8]")
+        selfcharged = "False"
+        PropagatorType = "Straight"
+        AntiParticleName = "D0stbar"
     elseif name == "Dsstp"
-        mass, S, Q, isospin, i3, FA_id = particle_information(2112, 1, 1, 0, 0, "V[8]")
+        mass, S, Q, isospin, i3, FA_id = particle_information(2112, 1, 1, 0, 0, "V[9]")
         selfcharged = "False"
         PropagatorType = "Straight"
         AntiParticleName = "Dsstm"
+    elseif name == "Dsstm"
+        mass, S, Q, isospin, i3, FA_id = particle_information(2112, -1, -1, 0, 0, "-V[9]")
+        selfcharged = "False"
+        PropagatorType = "Straight"
+        AntiParticleName = "Dsstp"
     end
     pp = Dict(
         :name => name,
