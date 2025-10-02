@@ -41,6 +41,25 @@ MakeBoxes[Dsstp,TraditionalForm]:="\!\(\*SuperscriptBox[SubscriptBox[\(D\), \(s\
 MakeBoxes[Dsp,TraditionalForm]:="\!\(\*SuperscriptBox[SubscriptBox[\(D\), \(s\)], \(+\)]\)";
 
 
+MakeBoxes[pipbar,TraditionalForm]:="\!\(\*SuperscriptBox[\(\[Pi]\), \(-\)]\)"
+MakeBoxes[K0bar,TraditionalForm]:="\!\(\*OverscriptBox[SubscriptBox[\(K\), \(0\)], \(_\)]\)";
+MakeBoxes[Kpbar,TraditionalForm]:="\!\(\*SuperscriptBox[\(K\), \(-\)]\)";
+MakeBoxes[Dpbar,TraditionalForm]:="\!\(\*SuperscriptBox[\(D\), \(-\)]\)";
+MakeBoxes[D0bar,TraditionalForm]:="\!\(\*OverscriptBox[SubscriptBox[\(D\), \(0\)], \(_\)]\)";
+MakeBoxes[Dspbar,TraditionalForm]:="\!\(\*SuperscriptBox[SubscriptBox[\(D\), \(s\)], \(-\)]\)";
+MakeBoxes[Dstpbar,TraditionalForm]:="\!\(\*SuperscriptBox[\(D\), \(\(*\)\(-\)\)]\)";
+MakeBoxes[D0stbar,TraditionalForm]:="\!\(\*OverscriptBox[SuperscriptBox[SubscriptBox[\(D\), \(0\)], \(*\)], \(_\)]\)";
+MakeBoxes[Dsstbar,TraditionalForm]:="\!\(\*SuperscriptBox[SubscriptBox[\(D\), \(s\)], \(\(*\)\(-\)\)]\)";
+
+
+MakeBoxes[L,TraditionalForm]:="\[CapitalLambda]";
+MakeBoxes[Sigp,TraditionalForm]:="\!\(\*SuperscriptBox[\(\[CapitalSigma]\), \(+\)]\)";
+MakeBoxes[Sigm,TraditionalForm]:="\!\(\*SuperscriptBox[\(\[CapitalSigma]\), \(-\)]\)";
+MakeBoxes[Sig0,TraditionalForm]:="\!\(\*SuperscriptBox[\(\[CapitalSigma]\), \(0\)]\)";
+MakeBoxes[Xi0,TraditionalForm]:="\!\(\*SuperscriptBox[\(\[CapitalXi]\), \(0\)]\)";
+MakeBoxes[Xim,TraditionalForm]:="\!\(\*SuperscriptBox[\(\[CapitalXi]\), \(-\)]\)";
+
+
 (* ::Section:: *)
 (*Mass*)
 
