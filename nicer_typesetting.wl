@@ -32,6 +32,13 @@ MakeBoxes[Kp,TraditionalForm]:="\!\(\*SuperscriptBox[\(K\), \(+\)]\)";
 MakeBoxes[Km,TraditionalForm]:="\!\(\*SuperscriptBox[\(K\), \(-\)]\)";
 MakeBoxes[K0,TraditionalForm]:="\!\(\*SubscriptBox[\(K\), \(0\)]\)";
 MakeBoxes[eta,TraditionalForm]:="\[Eta]";
+MakeBoxes[Dp,TraditionalForm]:="\!\(\*SuperscriptBox[\(D\), \(+\)]\)";
+MakeBoxes[Dm,TraditionalForm]:="\!\(\*SuperscriptBox[\(D\), \(-\)]\)";
+MakeBoxes[D0,TraditionalForm]:="\!\(\*SubscriptBox[\(D\), \(0\)]\)";
+MakeBoxes[Dstp,TraditionalForm]:="\!\(\*SuperscriptBox[\(D\), \(*\(+\)\)]\)";
+MakeBoxes[D0st,TraditionalForm]:="\!\(\*SuperscriptBox[SubscriptBox[\(D\), \(0\)], \(*\)]\)";
+MakeBoxes[Dsstp,TraditionalForm]:="\!\(\*SuperscriptBox[SubscriptBox[\(D\), \(s\)], \(*\(+\)\)]\)";
+MakeBoxes[Dsp,TraditionalForm]:="\!\(\*SuperscriptBox[SubscriptBox[\(D\), \(s\)], \(+\)]\)";
 
 
 (* ::Section:: *)
@@ -61,8 +68,8 @@ MakeBoxes[mphi,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), \(\[Phi]\)]\)";
 MakeBoxes[mome,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), \(\[Omega]\)]\)";
 
 MakeBoxes[mDsp,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SubsuperscriptBox[\(D\), \(s\), \(+\)]]\)";
-MakeBoxes[mDsp,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[\(D\), \(0\)]]\)";
-MakeBoxes[mDsp,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[\(D\), \(+\)]]\)";
+MakeBoxes[mD0,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[\(D\), \(0\)]]\)";
+MakeBoxes[mDp,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[\(D\), \(+\)]]\)";
 
 MakeBoxes[mp,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), \(p\)]\)"
 MakeBoxes[mn,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), \(n\)]\)"
@@ -73,3 +80,7 @@ MakeBoxes[mSig0,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[\(\[
 MakeBoxes[mXim,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[\(\[CapitalXi]\), \(-\)]]\)";
 MakeBoxes[mXi0,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[\(\[CapitalXi]\), \(0\)]]\)"
 MakeBoxes[mB,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), \(B\)]\)"
+
+MakeBoxes[mDstp,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[\(D\), \(*\(+\)\)]]\)";
+MakeBoxes[mD0st,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[SubscriptBox[\(D\), \(0\)], \(*\)]]\)";
+MakeBoxes[mDsstp,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[SubscriptBox[\(D\), \(s\)], \(*\(+\)\)]]\)";
