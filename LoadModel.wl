@@ -1,6 +1,6 @@
 (* ::Package:: *)
 
-loadMyModel[f1_,f2_]:=Module[{p1=f1,p2=f2},
+LoadModelFile[f1_,f2_]:=Module[{p1=f1,p2=f2},
 FAPatch[PatchModelsOnly->True,
 FAModelsDirectory->FileNameJoin[{NotebookDirectory[],p1}]];
 SetOptions[FourVector, FeynCalcInternal->False];

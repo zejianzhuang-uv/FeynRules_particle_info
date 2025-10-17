@@ -211,7 +211,7 @@ function select_particle(name::String)
         selfcharged = "False"
         PropagatorType = "Straight"
         AntiParticleName = "nbar"
-    elseif name == "L" # uds, S=-1
+    elseif name == "Lambda" # uds, S=-1
         selfcharged = "False"
         mass, S, Q, isospin, i3, FA_id = particle_information(1116, -1, 0, 0, 0, "F[3]")
         PropagatorType = "Straight"

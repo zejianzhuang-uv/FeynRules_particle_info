@@ -5,8 +5,8 @@
 
 
 MakeBoxes[gg,TraditionalForm]:="g";
-MakeBoxes[Dp,TraditionalForm]:="\[ScriptCapitalD]"
-MakeBoxes[Fp,TraditionalForm]:="\[ScriptCapitalF]"
+MakeBoxes[Dp,TraditionalForm]:="D"
+MakeBoxes[Fp,TraditionalForm]:="F"
 MakeBoxes[f,TraditionalForm]:="f"
 MakeBoxes[mu,TraditionalForm]:="\[Mu]"
 
@@ -53,7 +53,7 @@ MakeBoxes[D0stbar,TraditionalForm]:="\!\(\*OverscriptBox[SuperscriptBox[Subscrip
 MakeBoxes[Dsstbar,TraditionalForm]:="\!\(\*SuperscriptBox[SubscriptBox[\(D\), \(s\)], \(\(*\)\(-\)\)]\)";
 
 
-MakeBoxes[L,TraditionalForm]:="\[CapitalLambda]";
+MakeBoxes[Lambda,TraditionalForm]:="\[CapitalLambda]";
 MakeBoxes[Sigp,TraditionalForm]:="\!\(\*SuperscriptBox[\(\[CapitalSigma]\), \(+\)]\)";
 MakeBoxes[Sigm,TraditionalForm]:="\!\(\*SuperscriptBox[\(\[CapitalSigma]\), \(-\)]\)";
 MakeBoxes[Sig0,TraditionalForm]:="\!\(\*SuperscriptBox[\(\[CapitalSigma]\), \(0\)]\)";
@@ -93,7 +93,7 @@ MakeBoxes[mDp,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[\(D\),
 
 MakeBoxes[mp,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), \(p\)]\)"
 MakeBoxes[mn,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), \(n\)]\)"
-MakeBoxes[mL,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), \(\[CapitalLambda]\)]\)"
+MakeBoxes[mLambda,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), \(\[CapitalLambda]\)]\)"
 MakeBoxes[mSigp,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[\(\[CapitalSigma]\), \(+\)]]\)"
 MakeBoxes[mSigm,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[\(\[CapitalSigma]\), \(-\)]]\)"
 MakeBoxes[mSig0,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[\(\[CapitalSigma]\), \(0\)]]\)"
@@ -106,7 +106,7 @@ MakeBoxes[mD0st,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[Subs
 MakeBoxes[mDsstp,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[SubscriptBox[\(D\), \(s\)], \(*\(+\)\)]]\)";
 
 
-MakeBoxes[Mpip,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[\(\[Pi]\), \(+\)]]\)";
+(*MakeBoxes[Mpip,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[\(\[Pi]\), \(+\)]]\)";
 MakeBoxes[Mpim,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[\(\[Pi]\), \(-\)]]\)";
 MakeBoxes[Mpi0,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[\(\[Pi]\), \(0\)]]\)";
 
@@ -144,4 +144,4 @@ MakeBoxes[MB,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), \(B\)]\)"
 
 MakeBoxes[MDstp,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[\(D\), \(*\(+\)\)]]\)";
 MakeBoxes[MD0st,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[SubscriptBox[\(D\), \(0\)], \(*\)]]\)";
-MakeBoxes[MDsstp,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[SubscriptBox[\(D\), \(s\)], \(*\(+\)\)]]\)";
+MakeBoxes[MDsstp,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[SubscriptBox[\(D\), \(s\)], \(*\(+\)\)]]\)";*)
