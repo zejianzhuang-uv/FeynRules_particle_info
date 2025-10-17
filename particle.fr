@@ -1,0 +1,111 @@
+M$Information = {
+Author -> "Zejian Zhuang",
+Version -> 1.0}
+
+
+
+M$ClassesDescription = {
+
+S[1] == {
+	ClassName -> pip,
+	SelfConjugate -> False,
+	Mass -> {Mpip, 139.6},
+	Width -> 0
+	},
+
+(******************************)
+
+S[2] == {
+	ClassName -> pi0,
+	SelfConjugate -> True,
+	Mass -> {Mpi0, 135},
+	Width -> 0
+	},
+
+(******************************)
+
+S[3] == {
+	ClassName -> Kp,
+	SelfConjugate -> False,
+	Mass -> {MKp, 494},
+	Width -> 0
+	},
+
+(******************************)
+
+S[4] == {
+	ClassName -> K0,
+	SelfConjugate -> False,
+	Mass -> {MK0, 498},
+	Width -> 0
+	},
+
+(******************************)
+
+S[5] == {
+	ClassName -> eta,
+	SelfConjugate -> True,
+	Mass -> {Meta, 548},
+	Width -> 0
+	},
+
+(******************************)
+
+S[6] == {
+	ClassName -> Dp,
+	SelfConjugate -> False,
+	Mass -> {MDp, 1869},
+	Width -> 0
+	},
+
+(******************************)
+
+S[7] == {
+	ClassName -> D0,
+	SelfConjugate -> False,
+	Mass -> {MD0, 1865},
+	Width -> 0
+	},
+
+(******************************)
+
+S[8] == {
+	ClassName -> Dsp,
+	SelfConjugate -> False,
+	Mass -> {MDsp, 1969},
+	Width -> 0
+	},
+
+(******************************)
+
+V[7] == {
+	ClassName -> Dstp,
+	SelfConjugate -> False,
+	Mass -> {MDstp, 2010},
+	Width -> 0
+	},
+
+(******************************)
+
+V[8] == {
+	ClassName -> D0st,
+	SelfConjugate -> False,
+	Mass -> {MD0st, 2006},
+	Width -> 0
+	},
+
+(******************************)
+
+V[9] == {
+	ClassName -> Dsstp,
+	SelfConjugate -> False,
+	Mass -> {MDsstp, 2112},
+	Width -> 0
+	}	};
+
+
+
+M$Parameters = {
+	fa == {ParameterType -> Internal, ComplexParameter -> False, Value -> 100, TeX -> "f"},
+	gg == {ParameterType -> Internal, ComplexParameter -> False, Value -> 100, TeX -> "g"} 
+};

@@ -174,32 +174,32 @@ function select_particle(name::String)
     elseif name == "Dp"
         mass, S, Q, isospin, i3, FA_id = particle_information(1869, 0, 1, 1/2, 1/2, "S[6]")
         selfcharged = "False"
-        PropagatorType = "Straight"
+        PropagatorType = "D"
         AntiParticleName = "Dm"
     elseif name == "Dm"
         mass, S, Q, isospin, i3, FA_id = particle_information(1869, 0, -1, 1/2, -1/2, "-S[6]")
         selfcharged = "False"
-        PropagatorType = "Straight"
+        PropagatorType = "D"
         AntiParticleName = "Dp"
     elseif name == "D0"
         mass, S, Q, isospin, i3, FA_id = particle_information(1865, 0, 0, 1/2, -1/2, "S[7]")
         selfcharged = "False"
-        PropagatorType = "Straight"
+        PropagatorType = "D"
         AntiParticleName = "D0bar"
     elseif name == "D0bar"
         mass, S, Q, isospin, i3, FA_id = particle_information(1865, 0, 0, 1/2, 1/2, "-S[7]")
         selfcharged = "False"
-        PropagatorType = "Straight"
+        PropagatorType = "D"
         AntiParticleName = "D0"
     elseif name == "Dsp"
         mass, S, Q, isospin, i3, FA_id = particle_information(1969, 1, 1, 0, 0, "S[8]")
         selfcharged = "False"
-        PropagatorType = "Straight"
+        PropagatorType = "D"
         AntiParticleName = "Dsm"
     elseif name == "Dsm"
         mass, S, Q, isospin, i3, FA_id = particle_information(1969, 1, -1, 0, 0, "-S[8]")
         selfcharged = "False"
-        PropagatorType = "Straight"
+        PropagatorType = "D"
         AntiParticleName = "Dsp"
     elseif name == "p" # uud
         mass, S, Q, isospin, i3, FA_id = particle_information(938, 0, 1, 1/2, 1/2, "F[1]") 
@@ -361,12 +361,16 @@ function write_author_info(file; mode="w+")
 end
 
 
-
 function _field_info(particle)
     p = select_particle(particle)
-    t = "$(p[:FA_id]) == {\n\tClassName -> $(p[:name]),\n\tSelfConjugate -> $(p[:selfcharged]),\n\tAntiParticleName -> $(p[:AntiParticleName]),\n\tMass -> {m$(p[:name]), $(p[:mass])},\n\tPropagatorLabel -> \"$(p[:name])\",\n\tPropagatorType -> $(p[:PropagatorType]),\n\tWidth -> 0\n\t}"
+    t = "$(p[:FA_id]) == {\n\tClassName -> $(p[:name]),\n\tSelfConjugate -> $(p[:selfcharged]),\n\tMass -> {m$(p[:name]), $(p[:mass])},\n\tWidth -> 0\n\t}"
     return t
 end
+# function _field_info(particle)
+#     p = select_particle(particle)
+#     t = "$(p[:FA_id]) == {\n\tClassName -> $(p[:name]),\n\tSelfConjugate -> $(p[:selfcharged]),\n\tAntiParticleName -> $(p[:AntiParticleName]),\n\tMass -> {m$(p[:name]), $(p[:mass])},\n\tPropagatorLabel -> \"$(p[:name])\",\n\tPropagatorType -> $(p[:PropagatorType]),\n\tWidth -> 0\n\t}"
+#     return t
+# end
 
 
 
