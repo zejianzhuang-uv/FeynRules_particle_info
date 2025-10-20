@@ -27,10 +27,10 @@ Sum[P[[i]]A[[i,j]]Pd[[j]]//Expand,{i,n},{j,n}]];
 
 
 BbarOperSFB[B1_,B2_,SF_,oper_]:=Module[{n=Length[SF]},
-Table[Sum[B1[[i,j]] . oper . B2[[k,l]]SF[[j,k]],{j,n},{k,n}],{i,n},{l,n}]];
+Table[Sum[Distribute[B1[[i,j]] . oper . B2[[k,l]]]SF[[j,k]],{j,n},{k,n}],{i,n},{l,n}]];
 
 BbarOperBSF[B1_,B2_,SF_,oper_]:=Module[{n=Length[SF]},
-Table[Sum[B1[[i,j]] . oper . B2[[j,k]] SF[[k,l]],{j,n},{k,n}],{i,n},{l,n}]];
+Table[Sum[Distribute[B1[[i,j]] . oper . B2[[j,k]]] SF[[k,l]],{j,n},{k,n}],{i,n},{l,n}]];
 
 
 (*BFOperatorSFBFPro[B1_,oper_,SF_,B2_]:=Module[{n=Length[SF]},
