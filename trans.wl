@@ -40,7 +40,7 @@ IsoID[Ch_,I_]:=
 Table[ff[I,Ch[[i]]],{i,Length[Ch]}];
 
 
-tableIsoCG[Ch_,isobase_,I_]:=Table[
+IsospinSpaceCGCoeff[Ch_,isobase_,I_]:=Table[
 coupledBasis[isobase[[i]],I]//Coefficient[#,IsoID[Ch,I][[j]]]&,
 {i,Length[isobase]},
 {j,Length[Ch]}];

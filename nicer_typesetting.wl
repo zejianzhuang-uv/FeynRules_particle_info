@@ -1,5 +1,8 @@
 (* ::Package:: *)
 
+SetOptions[EvaluationNotebook[],CommonDefaultFormatTypes->{"Output"->TraditionalForm}];
+
+
 (* ::Section:: *)
 (*Parameter*)
 
@@ -9,6 +12,13 @@ MakeBoxes[Dp,TraditionalForm]:="D"
 MakeBoxes[Fp,TraditionalForm]:="F"
 MakeBoxes[ff,TraditionalForm]:="f"
 MakeBoxes[mu,TraditionalForm]:="\[Mu]"
+MakeBoxes[DD,TraditionalForm]:="D";
+MakeBoxes[FF,TraditionalForm]:="F";
+
+
+MakeBoxes[b0,TraditionalForm]:="\!\(\*SubscriptBox[\(b\), \(0\)]\)"
+MakeBoxes[bF,TraditionalForm]:="\!\(\*SubscriptBox[\(b\), \(F\)]\)"
+MakeBoxes[bD,TraditionalForm]:="\!\(\*SubscriptBox[\(b\), \(D\)]\)"
 
 
 (* ::Section:: *)
@@ -63,6 +73,10 @@ MakeBoxes[Xim,TraditionalForm]:="\!\(\*SuperscriptBox[\(\[CapitalXi]\), \(-\)]\)
 
 (* ::Section:: *)
 (*Mass*)
+
+
+MakeBoxes[mpi,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), \(\[Pi]\)]\)"
+MakeBoxes[mK,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), \(K\)]\)"
 
 
 MakeBoxes[mpip,TraditionalForm]:="\!\(\*SubscriptBox[\(m\), SuperscriptBox[\(\[Pi]\), \(+\)]]\)";
