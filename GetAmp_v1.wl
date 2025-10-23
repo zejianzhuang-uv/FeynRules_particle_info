@@ -16,7 +16,10 @@ F[4]->mSigp,
 F[5]->mSigm,
 F[6]->mSig0,
 F[7]->mXi0,
-F[8]->mXim}},
+F[8]->mXim,
+S[6]->mDp,
+S[7]->mD0,
+S[8]->mDsp}},
 Association[s][x]];
 GetBaryonName[x_]:=Module[
 {s={
@@ -87,6 +90,30 @@ xx=Table[amp//Coefficient[#,SUCh[[i]]]&//Simplify,{i,nn}];
 yy=Table[i->xx[[i]],{i,nn}];
 yy//Association
 ]
+
+
+(* ::Section:: *)
+(*light-meson and heavy meson system*)
+
+
+GetLHContactAmp[{i1_,i2_},{o1_,o2_},path_]:=
+Module[{d=GetContactDiagram[{i1,i2},{o1,o2},path],amp},
+FCClearScalarProducts[];
+SetMandelstam[s, t, u, k1,p1,-k2,-p2, GetParticleMass[i1], GetParticleMass[i2], GetParticleMass[o1], GetParticleMass[o2]];
+amp=ExpandScalarProduct[
+FCFAConvert[CreateFeynAmp[d,Truncated->True],
+IncomingMomenta->{k1,p1},
+OutgoingMomenta->{k2,p2},
+UndoChiralSplittings->True,
+ChangeDimension->4,
+	List->False, 
+	SMP->True, 
+	Contract->True]];
+Return[amp(*//FeynAmpDenominatorExplicit*)//Simplify];FCClearScalarProducts[];];
+
+GetLHContactAmpLECs[Ch_,factor_,path_]:=
+Module[{n=Length[Ch]},
+Table[GetLHContactAmp[Ch[[i]],Ch[[j]],path]/factor//FullSimplify,{i,n},{j,n}]];
 
 
 (* ::Section:: *)

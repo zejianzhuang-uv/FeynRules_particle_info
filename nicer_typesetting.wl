@@ -14,6 +14,7 @@ MakeBoxes[ff,TraditionalForm]:="f"
 MakeBoxes[mu,TraditionalForm]:="\[Mu]"
 MakeBoxes[DD,TraditionalForm]:="D";
 MakeBoxes[FF,TraditionalForm]:="F";
+MakeBoxes[ga,TraditionalForm]:="\[Gamma]";
 
 
 MakeBoxes[b0,TraditionalForm]:="\!\(\*SubscriptBox[\(b\), \(0\)]\)"

@@ -13,33 +13,7 @@ function write_channel_info(name::String, ch::Vector{String}, file::String; mode
     return nothing
 end
 
-"""
-totS: The sum of the strangesses of the two scattered particles
 
-totQ: the sum of the charges of the two scattered particles
-
-i1(2)_list: the two particles as input
-"""
-function _scattering_channel(totS::Int64, totQ::Int64, i1_vec::Vector{String}, i2_vec::Vector{String})
-    ch = String[]
-    FA_id = String[]
-    thre = Float64[]
-    for i1 in i1_vec
-        m = select_particle(i1)
-        for i2 in i2_vec
-            b = select_particle(i2)
-            if m[:S] + b[:S] == totS && m[:Q] + b[:Q] == totQ
-                push!(ch, "(m$(m[:name]), m$(b[:name]))")  
-                push!(FA_id, "{$(m[:FA_id]),$(b[:FA_id])}")
-                push!(thre, m[:mass] + b[:mass])    
-            end
-        end
-    end
-    df = DataFrame(FA_id=FA_id, ch=ch, thre=thre)
-    sort!(df, :thre)
-    # PrettyTables.pretty_table(df, title="S=$totS, Q=$totQ", title_alignment = :c)
-    return df
-end
 
 function isospin_combination(i1, i2)
     return [i1+i2:-1:abs(i1-i2)...]
@@ -56,6 +30,37 @@ function iso3_vec(isospin)
         i3 = [1/2, -1/2]
     end
     return i3
+end
+
+"""
+totS: The sum of the strangesses of the two scattered particles
+
+totQ: the sum of the charges of the two scattered particles
+
+i1(2)_list: the two particles as input
+"""
+function _scattering_channel(totS::Int64, totQ::Int64, i1_vec::Vector{String}, i2_vec::Vector{String})
+    ch = Vector{Tuple{String, String}}([])
+    FA_id = String[]
+    thre = Float64[]
+    for i1 in i1_vec
+        m = select_particle(i1)
+        for i2 in i2_vec
+            b = select_particle(i2)
+            if m[:S] + b[:S] == totS && m[:Q] + b[:Q] == totQ
+                # push!(ch, "($(m[:name]), $(b[:name]))")  
+                # push!(FA_id, "{$(m[:FA_id]),$(b[:FA_id])}")
+                # push!(thre, m[:mass] + b[:mass])    
+                push!(ch, ("$(m[:name])", "$(b[:name])"))  
+                push!(FA_id, "{$(m[:FA_id]),$(b[:FA_id])}")
+                push!(thre, m[:mass] + b[:mass])   
+            end
+        end
+    end
+    df = DataFrame(FA_id=FA_id, ch=ch, thre=thre)
+    sort!(df, :thre)
+    # PrettyTables.pretty_table(df, title="S=$totS, Q=$totQ", title_alignment = :c)
+    return df
 end
 
 """
