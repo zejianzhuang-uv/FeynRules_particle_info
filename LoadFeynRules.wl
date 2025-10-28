@@ -13,3 +13,4 @@ SetDirectory[NotebookDirectory[]];
 Get["./FeynRules_particle_info/FeynRule_CHPT_v1.wl"]
 Get["./FeynRules_particle_info/nicer_typesetting.wl"]
 Get["./FeynRules_particle_info/LoadField.wl"]
+Get["./FeynRules_particle_info/DotExpand.wl"]

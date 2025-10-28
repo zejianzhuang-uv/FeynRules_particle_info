@@ -53,6 +53,11 @@ Expand[A-B]];
 
 BaryonMatPro[B1_,B2_]:=Table[Sum[Distribute[B1[[i,j]] . B2[[j,k]]],{j,3}],{i,3},{k,3}];
 
+MDotM[M1_,M2_]:=Table[Expand[Sum[M1[[i,k]] M2[[k,j]],{k,3}]],{i,3},{j,3}];
+BDotB[B1_,B2_]:=Table[Sum[Distribute[B1[[i,j]] . B2[[j,k]]],{j,3}],{i,3},{k,3}];
+BDotM[M_,B_]:=Table[Sum[B[[i,k]]M[[k,j]],{k,3}],{i,3},{j,3}];
+MDotB[M_,B_]:=Table[Sum[M[[i,k]]B[[k,j]],{k,3}],{i,3},{j,3}];
+
 
 BbarOperB[B1_,B2_,Oper_]:=
 Module[{n=Length[B1]},

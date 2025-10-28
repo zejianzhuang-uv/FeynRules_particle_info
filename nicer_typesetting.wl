@@ -20,6 +20,17 @@ MakeBoxes[ga,TraditionalForm]:="\[Gamma]";
 MakeBoxes[b0,TraditionalForm]:="\!\(\*SubscriptBox[\(b\), \(0\)]\)"
 MakeBoxes[bF,TraditionalForm]:="\!\(\*SubscriptBox[\(b\), \(F\)]\)"
 MakeBoxes[bD,TraditionalForm]:="\!\(\*SubscriptBox[\(b\), \(D\)]\)"
+MakeBoxes[b1,TraditionalForm]:="\!\(\*SubscriptBox[\(b\), \(1\)]\)"
+MakeBoxes[b2,TraditionalForm]:="\!\(\*SubscriptBox[\(b\), \(2\)]\)"
+MakeBoxes[b3,TraditionalForm]:="\!\(\*SubscriptBox[\(b\), \(3\)]\)"
+MakeBoxes[b4,TraditionalForm]:="\!\(\*SubscriptBox[\(b\), \(4\)]\)"
+MakeBoxes[b5,TraditionalForm]:="\!\(\*SubscriptBox[\(b\), \(5\)]\)"
+MakeBoxes[b6,TraditionalForm]:="\!\(\*SubscriptBox[\(b\), \(6\)]\)"
+MakeBoxes[b7,TraditionalForm]:="\!\(\*SubscriptBox[\(b\), \(7\)]\)"
+MakeBoxes[b8,TraditionalForm]:="\!\(\*SubscriptBox[\(b\), \(8\)]\)"
+MakeBoxes[b9,TraditionalForm]:="\!\(\*SubscriptBox[\(b\), \(9\)]\)"
+MakeBoxes[b10,TraditionalForm]:="\!\(\*SubscriptBox[\(b\), \(10\)]\)"
+MakeBoxes[b11,TraditionalForm]:="\!\(\*SubscriptBox[\(b\), \(11\)]\)"
 
 
 (* ::Section:: *)

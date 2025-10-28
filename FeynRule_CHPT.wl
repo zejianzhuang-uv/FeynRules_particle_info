@@ -1,5 +1,12 @@
 (* ::Package:: *)
 
+pd[\[Phi]_,\[Mu]_]:=del[\[Phi],\[Mu]];
+pd[\[Phi]_MatrixQ,\[Mu]_]:=Module[
+{n=Length[\[Phi]]},
+Table[del[\[Phi][[i,j]],\[Mu]],{i,n},{j,n}]
+];
+
+
 pdMatScalarField[\[Phi]_,\[Mu]_]:=
 Module[{n=Length[\[Phi]]},
 Table[del[\[Phi][[i,j]],\[Mu]],{i,n},{j,n}]];
